@@ -10,11 +10,48 @@ Cat Squirrel Lounge website is for fanciers of the Cat Squirrel.  In addition to
 ```
 The class(es) I created are:
 
-1. class name ex( .main-info-section )
+/* General styles */
+
+body {background-color: tomato;}
+/*.debug {
+border: 1px solid darkgrey;
+}*/
+
+img {max-width:100%;
+	display: block;
+} 
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 6px;
+  border: 6px solid #000;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Create three equal columns that sits next to each other */
+.column {
+  flex: 33%;
+  max-width: 33%;
+  padding: 0 6px;
+	border: 6px solid #000;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
 .column:first-child {border-style: solid}
 .column:nth-child(2n+3) {border-style: dashed}
+
+
+
 /* Responsive layout - makes a two column-layout instead of three columns */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
   .column {
     flex: 50%;
     max-width: 50%;
@@ -22,14 +59,12 @@ The class(es) I created are:
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 512px) {
+@media screen and (max-width: 800px) {
   .column {
     flex: 100%;
     max-width: 100%;
   }
 }
-
-2.
 
 ```
 
@@ -39,26 +74,26 @@ The class(es) I created are:
 ```
 The javascript functions I created are:
 
-1* intended to toggle between displaying the images and displaying the information in the XMP tags metadata. */
+
+/* this one is supposed to set the image files style to show */
 function loadImageFiles ()
 {
     console.log("tbd");
 }
 
-/* this was supposed to use the EXIF library to show the XMP meta data stored in the file, 
-But I had trouble getting it to work */
+/* This is supposed to be a toggle between showing the images and showing the srcset file URLs */
 function showXMP ()
 {
 var ilist = document.images;
 
 for(var i = 0; i < ilist.length; i++) {
-    alert(ilist[i].srcset);	
-       /* display the img srcset files */
+   ilist[i].style.visibility = "show";
+        // found the banner
 }	
 }
 
 
-
+/* window onload handler */
 window.onload = function() {
     var btn = document.getElementById("showImages");
     if (btn != null)
