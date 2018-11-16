@@ -1,20 +1,29 @@
 /* General styles */
 
 body {background-color: tomato;}
-.debug {
+/*.debug {
 border: 1px solid darkgrey;
-}
+}*/
+
+img {max-width:100%} 
+
 .row {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 4px;
+  padding: 0 6px;
+  border: 6px solid #000;
 }
 
-/* Create four equal columns that sits next to each other */
+* {
+    box-sizing: border-box;
+}
+
+/* Create three equal columns that sits next to each other */
 .column {
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 4px;
+  flex: 33%;
+  max-width: 33%;
+  padding: 0 6px;
+	border: 6px solid #000;
 }
 
 .column img {
@@ -22,10 +31,13 @@ border: 1px solid darkgrey;
   vertical-align: middle;
 }
 
-img {max-width:100%}
+.column:first-child {border-style: solid}
+.column:nth-child(2n+3) {border-style: dashed}
 
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
+
+
+/* Responsive layout - makes a two column-layout instead of three columns */
+@media screen and (max-width: 1024px) {
   .column {
     flex: 50%;
     max-width: 50%;
@@ -33,7 +45,7 @@ img {max-width:100%}
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 512px) {
   .column {
     flex: 100%;
     max-width: 100%;
