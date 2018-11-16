@@ -1,24 +1,23 @@
 
-/* intended to toggle between displaying the images and displaying the information in the XMP tags metadata. */
+/* this one is supposed to set the image files style to show */
 function loadImageFiles ()
 {
     console.log("tbd");
 }
 
-/* this was supposed to use the EXIF library to show the XMP meta data stored in the file, 
-But I had trouble getting it to work */
+/* This is supposed to be a toggle between showing the images and showing the srcset file URLs */
 function showXMP ()
 {
 var ilist = document.images;
 
 for(var i = 0; i < ilist.length; i++) {
-    alert(ilist[i].srcset);	
+   ilist[i].style.visibility = "show";
         // found the banner
 }	
 }
 
 
-
+/* window onload handler */
 window.onload = function() {
     var btn = document.getElementById("showImages");
     if (btn != null)

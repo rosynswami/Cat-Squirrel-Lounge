@@ -41,7 +41,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
            <button class="dropdown-item" id="showImages" type="button">Show Images</button>
-    		<button class="dropdown-item" id="showXMPmetadata" type="button">show XMP metadata</button>
+    		<button class="dropdown-item" id="showXMP" type="button">show XMP metadata</button>
 
  	   </li>
       <li class="nav-item">
@@ -51,54 +51,58 @@
   </div>
 </nav>  
 <!-- Starting with three columns in the image grid of the Cat Squirrel site
-Load smaller images on when the  480px or less -->
+Try to use a smaller image to speed up load time -->
 <div class="debug" >
   <div class="row debug"> 
   <div class="column debug">
-  <img srcset="img\acorn-365.jpg 365w,
-             img\acorn.jpg 730w"
-     sizes="(max-width: 480px) 470px, 
-            (max-width: 1200px) 1180px" >
+  <img srcset="img\acorn-365.jpg 1x,
+             img\acorn.jpg 1.5x"
+          src="img\acorn.jpg" alt="squirrel holding acorn">
+          <div id="acorntxt" style="visibility: hidden" >blank</div>
+          
 
-	<img srcset="img\babysquirrel-480.jpg 480w,
-			img\babysquirrel.jpg 1280w"
-			sizes="(max-width: 480px) 470px,
-			(max-width: 1200px) 1180px" >
-	<img srcset="img\bigmouth-480.jpg 480w,
-			img\bigmouth.jpg 1280w"
-			sizes="(max-width: 480px) 460px,
-			(max-width: 1200px) 1180px" >
+	<img srcset="img\babysquirrel-480.jpg 1x,
+			img\babysquirrel.jpg 1.5x"
+			src="img\babysquirrel.jpg" >
+          <div id="babysquirreltxt" style="visibility: hidden" >blank</div>
+	<img srcset="img\bigmouth-480.jpg 1x,
+			img\bigmouth.jpg 1.5x"
+			src="img\bigmouth.jpg">
+          <div id="bigmouthtxt" style="visibility: hidden" >blank</div>
+			
   </div>
   <div class="column debug">
-    <img srcset="img\bluebutterfly-480.jpg 480w,
-   	img\bluebutterfly.jpg 1600w"
- 			sizes="(max-width: 480px) 480px,
-			(max-width: 1200px) 1180px" >
-   <img srcset="img\boayello-480.jpg 800w,
-   	img\boayello.jpg 1600w"
- 			sizes="(max-width: 480px) 470px,
-			(max-width: 1200px) 1180px" >
-   <img srcset="img\bigknot-480.jpg 600w,
-   	img\bigknot.jpg 1200w"
- 			sizes="(max-width: 480px) 470px,
-			(max-width: 1200px) 1180px" >
+    <img srcset="img\bluebutterfly-480.jpg 1x,
+   	img\bluebutterfly.jpg 1.5x"
+			src="img\bluebutterfly.jpg" >
+         <div id="bluebutterflytxt" style="visibility: hidden" >blank</div>
+
+   <img srcset="img\boayello-480.jpg 1x,
+   	img\boayello.jpg 1.5x"
+			src="imgboayello.jpg" >
+          <div id="boayellotxt" style="visibility: hidden" >blank</div>
+
+   <img srcset="img\bigknot-480.jpg 1x,
+   	img\bigknot.jpg 1.5x"
+			src="img\bigknot.jpg" >
+          <div id="bigknottxt" style="visibility: hidden" >blank</div>
        
   </div> 
  <div class="column debug">
-   <img srcset="img\elephants-480.jpg 480w,
-   	img\elephants.jpg 1600w"
- 			sizes="(max-width: 480px) 470px,
-			(max-width: 1200px) 1180px" >
+   <img srcset="img\elephants-480.jpg 1x,
+   	img\elephants.jpg 1.5x"
+			src="elephants.jpg" >
+          <div id="elephantstxt" style="visibility: hidden" >blank</div>
  
-  <img srcset="img\knothole-317.jpg 317w,
-   	img\knothole.jpg 634w"
- 			sizes="(max-width: 480px) 470px,
-			(max-width: 1200px) 1180px" >
- <img srcset="img\champy-480.jpg 480w,
-   	img\champy.jpg 1820w"
- 			sizes="(max-width: 480px) 470px,
-			(max-width: 1200px) 1180px" >
-      
+  <img srcset="img\knothole-317.jpg 1x,
+   	img\knothole.jpg 1.5x"
+			src="img\knothole.jpg">
+           <div id="knotholetxt" style="visibility: hidden" >blank</div>
+<img srcset="img\champy-480.jpg 1x,
+   	img\champy.jpg 1.5x"
+			src="img\champy.jpg" >
+           <div id="champytxt" style="visibility: hidden" >blank</div>
+     
   </div> 
 </div>
 <footer>
