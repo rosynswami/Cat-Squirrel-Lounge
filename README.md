@@ -1,10 +1,8 @@
-# CodeLou_FrontEnd
+# Cat Squirrel Lounge
 
 ## Description
 ```
-A brief description of your project
-
-```
+Cat Squirrel Lounge website for nite club "Cat Squirrel" a club named for the classic blues guitar lick made famous in Deep Purple's "My Woman from Tokyo". I hope to use the "cat squirrel"  Sciurus vulgaris a red squirrel native to europe as the ambassador of the nite club. Doctor Ross recorded the original Cat Squirrel in 1961. A song of unrequited love.
 
 
 
